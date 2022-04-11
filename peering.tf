@@ -35,7 +35,7 @@ resource "aws_vpc_peering_connection" "peer1" {
 }
 
 #resource "aws_vpc" "spoke1" {
- # cidr_block = "172.31.0.0/16"
+ # cidr_block = "172.35.0.0/16"
 #}
 
 #resource "aws_vpc" "Hub" {
