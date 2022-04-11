@@ -7,7 +7,7 @@ provider "aws" {
 #vpc creation
 
 resource "aws_vpc" "spoke1vpc" {
-  cidr_block = "172.31.0.0/16"
+  cidr_block = "172.35.0.0/16"
 
   tags = {
     name = "spoke1-vpc"
@@ -45,7 +45,7 @@ resource "aws_route_table" "route-private-spoke1" {
 
 resource "aws_subnet" "pvt_main1" {
   vpc_id     = aws_vpc.spoke1vpc.id
-  cidr_block = "172.31.1.0/24"
+  cidr_block = "172.35.1.0/24"
   availability_zone = "us-east-2a"
 
   tags = {
@@ -56,7 +56,7 @@ resource "aws_subnet" "pvt_main1" {
 # Create a private-subnet2
 resource "aws_subnet" "pvt_main2" {
   vpc_id     = aws_vpc.spoke1vpc.id
-  cidr_block = "172.31.2.0/24"
+  cidr_block = "172.35.2.0/24"
   availability_zone = "us-east-2b"
 
   tags = {
@@ -67,7 +67,7 @@ resource "aws_subnet" "pvt_main2" {
 # Create a private-subnet3
 resource "aws_subnet" "pvt_main3" {
   vpc_id     = aws_vpc.spoke1vpc.id
-  cidr_block = "172.31.3.0/24"
+  cidr_block = "172.35.3.0/24"
   availability_zone = "us-east-2c"
 
   tags = {
