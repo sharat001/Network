@@ -66,7 +66,7 @@ resource "aws_route_table" "rt_private" {
 resource "aws_subnet" "private_subnet_a" {
   vpc_id     = aws_vpc.hub_vpc.id
   cidr_block = "172.16.1.0/24"
-  availability_zone = "us-east-2a"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "hub-sn-pvta"
   }
@@ -75,7 +75,7 @@ resource "aws_subnet" "private_subnet_a" {
 resource "aws_subnet" "private_subnet_b" {
   vpc_id     = aws_vpc.hub_vpc.id
   cidr_block = "172.16.2.0/24"
-  availability_zone = "us-east-2b"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "hub-sn-pvtb"
   }
@@ -84,7 +84,7 @@ resource "aws_subnet" "private_subnet_b" {
 resource "aws_subnet" "private_subnet_c" {
   vpc_id     = aws_vpc.hub_vpc.id
   cidr_block = "172.16.3.0/24"
-  availability_zone = "us-east-2c"
+  availability_zone = "us-east-1c"
   tags = {
     Name = "hub-sn-pvtc"
   }
@@ -94,7 +94,7 @@ resource "aws_subnet" "private_subnet_c" {
 resource "aws_subnet" "public_subnet_a" {
   vpc_id     = aws_vpc.hub_vpc.id
   cidr_block = "172.16.4.0/24"
-  availability_zone = "us-east-2a"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "hub-sn-puba"
   }
@@ -102,7 +102,7 @@ resource "aws_subnet" "public_subnet_a" {
 resource "aws_subnet" "public_subnet_b" {
   vpc_id     = aws_vpc.hub_vpc.id
   cidr_block = "172.16.5.0/24"
-  availability_zone = "us-east-2b"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "hub-sn-pubb"
   }
@@ -110,7 +110,7 @@ resource "aws_subnet" "public_subnet_b" {
 resource "aws_subnet" "public_subnet_c" {
   vpc_id     = aws_vpc.hub_vpc.id
   cidr_block = "172.16.6.0/24"
-  availability_zone = "us-east-2c"
+  availability_zone = "us-east-1c"
   tags = {
     Name = "hub-sn-pubc"
   }
