@@ -4,7 +4,15 @@ provider "aws" {
   #### secret_key = ""
 }
 
-
+terraform {
+    backend "s3" { 
+        encrypt = true
+        bucket = "network-logfiles"
+        dynamodb_table = "tf-state-lock-dynamo"
+        key = "terraform.tfstate"
+        region = "us-east-1"
+    }
+}
 
 module "hubmodule" {
     source = "./modules/hub"
