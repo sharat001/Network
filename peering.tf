@@ -80,10 +80,4 @@ resource "aws_vpc_peering_connection" "peer3" {
   }
 }
 
-#resource "aws_vpc" "spoke3" {
- # cidr_block = "172.33.0.0/16"
-#}
-
-#resource "aws_vpc" "Hub" {
- # cidr_block = "172.16.0.0/16"
-#}
+#
