@@ -10,7 +10,7 @@ resource "aws_vpc" "spoke3vpc" {
   cidr_block = "172.33.0.0/16"
 
   tags = {
-    name = "spoke3vpc"
+    Name = "spoke3vpc"
   }
 }
 
