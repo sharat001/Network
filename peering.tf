@@ -6,10 +6,10 @@ provider "aws" {
 
 terraform {
     backend "s3" { 
-        encrypt = true
+        #encrypt = true
         bucket = "network-logfiles"
         dynamodb_table = "tf-state-lock-dynamo"
-        key = "terraform.tfstate"
+        key = "Hubandspoke/terraform.tfstate"
         region = "us-east-1"
     }
 }
